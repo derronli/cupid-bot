@@ -42,7 +42,8 @@ To effectively show Cupid bot's ability to match speech patterns and adapt to th
 ![image](https://github.com/derronli/cupid-bot/assets/104483680/27e6bb8d-485f-4955-86fd-495b9042778e)
 
 ## Summarization Demo
-Prompt generated courtesy of ChatGPT
+Prompt generated courtesy of ChatGPT\
+In case you're in the middle of a game/video/project and need to quickly reply to your significant other
 
 ![image](https://github.com/derronli/cupid-bot/assets/104483680/11975ca4-c577-4739-996d-51129e3d8a87)
 
