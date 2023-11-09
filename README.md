@@ -1,7 +1,7 @@
 # Cupid Bot
-A discord bot for personalized relationship help using generative AI and NLP\
+A discord bot that can adapt to the user's speech patterns to answer the hard questions and provide personalized relationship help - using generative AI and NLP\
 \
-Built with Python and Cohere API\
+Built with Python and Cohere API
 
 **Disclaimer:** Cupid bot is purely for entertainment purposes and is not indicative of my opinions on human relationships😅 
 ## Motivation
@@ -21,13 +21,14 @@ Note that for this demo, Cupid bot was trained to mimic a very affectionate boyf
 
 **Cupid bot knows to use the User's commonly used emojis and words. It's almost creepy...**
 
+![image](https://github.com/derronli/cupid-bot/assets/104483680/73510af4-e871-4679-a573-c653a33d15cb)
 
 
 **Notice the short forms and texting style**
 
-![imgimg](https://github.com/derronli/cupid-bot/assets/104483680/b3f68149-230a-42fd-83ec-fb207fe53760)
+![asdasd](https://github.com/derronli/cupid-bot/assets/104483680/c4c13ab5-1da2-49bc-b1f3-03e6e0edc31f)
 
-Note that these bot messages are normally only visible to the user (as a discord Ephemeral message) but were exposed for demo sake\
+Note that these bot messages are normally only visible to the user (as a discord Ephemeral message) but were exposed for demo sake
 
 ## Customization Demo
 To effectively show Cupid bot's ability to match speech patterns and adapt to the target who it's responding to, I trained Cupid Bot on my friend and my chat logs
@@ -45,3 +46,27 @@ Prompt generated courtesy of ChatGPT
 
 ![image](https://github.com/derronli/cupid-bot/assets/104483680/11975ca4-c577-4739-996d-51129e3d8a87)
 
+## How does it Work
+
+![image](https://github.com/derronli/cupid-bot/assets/104483680/fdb07a27-94af-4c20-832e-4f80fbdb89d0)
+*Above is the general flow which I followed, starting from the top left.*\
+### I believe the most crucial step was the classification
+Text messages were extracted into the following format:
+1. Prompt (target) - "How do you like my new hairstyle?"
+2. Message (user) - "Wow it looks great on you!"
+3. Response (target) - "Aw, thanks!!!"
+
+Then each **Response** was tagged with a Response Semantic using the Cohere Classify Endpoint. (Positive/Negative/Neutral)\
+\
+From here, all rows in the table tagged with a non-Positive response were removed, along with the Response column - leaving us with only the Prompt-Message pairs which we know the **target responds well to**\
+\
+These Prompt-Message pairs were then used to train the Generative AI Model. Allowing for the bot to pick up on the optimal responses to the target's "Prompts".
+
+## Using Cupid Bot
+**Disclaimer:** Cupid Bot is not liable if it were to damage your relationships.
+
+Install dependencies
+```
+pip install cohere
+pip install pandas
+```
