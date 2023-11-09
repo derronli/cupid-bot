@@ -1,0 +1,7 @@
+.env
+bot/.env
+examples.py
+smirkysheep-chat-logs/
+punyrice-chat-logs/
+credentials.py
+__pycache__/
