@@ -49,7 +49,8 @@ Prompt generated courtesy of ChatGPT
 ## How does it Work
 
 ![image](https://github.com/derronli/cupid-bot/assets/104483680/fdb07a27-94af-4c20-832e-4f80fbdb89d0)
-*Above is the general flow which I followed, starting from the top left.*\
+
+*Above is the general flow which I followed, starting from the top left.*
 ### I believe the most crucial step was the classification
 Text messages were extracted into the following format:
 1. Prompt (target) - "How do you like my new hairstyle?"
@@ -63,10 +64,27 @@ From here, all rows in the table tagged with a non-Positive response were remove
 These Prompt-Message pairs were then used to train the Generative AI Model. Allowing for the bot to pick up on the optimal responses to the target's "Prompts".
 
 ## Using Cupid Bot
-**Disclaimer:** Cupid Bot is not liable if it were to damage your relationships.
+**Disclaimer:** Cupid Bot is not liable if it were to damage your relationships.\
+Setup is quite complex right now, a future goal would be to simplify it.
+
+`clone the repo`
 
 Install dependencies
 ```
 pip install cohere
 pip install pandas
 ```
+
+Use [DiscordChatExporter](https://github.com/Tyrrrz/DiscordChatExporter) to extract messages from you and your significant other (or friend)\
+**Export as a .txt file**\
+The period of time you choose to extract is up to you\
+\
+Place the .txt into the project's root directory\
+Run the `main.py` file, either with your editor's code runner or `python main.py`\
+This will output the *training-generate.csv* file\
+Create a customized Generate model with Cohere and input the *training-generate.csv* file\
+Fill in the MODEL_ID field in `CohereLayer.py` with the customized model ID produced\
+Fill in the `examples.py` file with desired prompt (Keep in mind, mine examples.py is hidden for privacy sake, but I will provide a template for this)\
+Run the bot!
+
+### If you made it this far: Thanks for reading! I hope you had as much fun reading about/playing with Cupid Bot as I did making it
