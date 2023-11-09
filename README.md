@@ -28,6 +28,13 @@ Note that for this demo, Cupid bot was trained to mimic a very affectionate boyf
 
 ![asdasd](https://github.com/derronli/cupid-bot/assets/104483680/c4c13ab5-1da2-49bc-b1f3-03e6e0edc31f)
 
+**Sometimes it has some funny mistakes**
+
+![image](https://github.com/derronli/cupid-bot/assets/104483680/e0c9c4cd-4fcd-41b9-add7-3c676bfc3d2a)
+![image](https://github.com/derronli/cupid-bot/assets/104483680/3cea2b1c-392f-4fb3-87fa-819dde29a9da)
+
+
+
 Note that these bot messages are normally only visible to the user (as a discord Ephemeral message) but were exposed for demo sake
 
 ## Customization Demo
